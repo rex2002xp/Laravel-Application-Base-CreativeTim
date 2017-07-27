@@ -1,95 +1,177 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.landing')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+    <div class="page-header page-header-small">
+        <div class="page-header-image" data-parallax="true" style="background-image: url('{{ asset('img/bg6.jpg') }}');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">This is our great company.</h1>
+                <div class="text-center">
+                    <a href="#pablo" class="btn btn-primary btn-icon  btn-icon-mini">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-primary btn-icon  btn-icon-mini">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h2 class="title">Who we are?</h2>
+                    <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.</h5>
+                </div>
+            </div>
+            <div class="separator separator-primary"></div>
+            <div class="section-story-overview">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="image-container image-left">
+                            <!-- First image on the left side -->
+                            <img src="{{ asset('img/login.jpg') }}" alt="" class="rounded img-fluid img-raised">
+                            <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                                <br>
+                                <br>
+                                <small>-NOAA</small>
+                            </p>
+                        </div>
+                        <!-- Second image on the left side of the article -->
+                        <div class="image-container">
+                            <img src="{{ asset('img/bg3.jpg') }}" alt="" class="img-fluid rounded img-raised">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <!-- First image on the right side, above the article -->
+                        <div class="image-container image-right">
+                            <img src="{{ asset('img/bg1.jpg') }}" alt="" class="rounded img-fluid img-raised">
+                        </div>
+                        <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
+                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
+                        </p>
+                        <p>
+                            For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
+                        </p>
+                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-team text-center ">
+        <div class="container">
+            <h2 class="title">Here is our team</h2>
+            <div class="team">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="team-player">
+                            <img src="{{ asset('img/avatar.jpg') }}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                            <h4 class="title">Romina Hadid</h4>
+                            <p class="category text-primary">Model</p>
+                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-instagram"></i></a>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-player">
+                            <img src="{{ asset('img/ryan.jpg') }}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                            <h4 class="title">Ryan Tompson</h4>
+                            <p class="category text-primary">Designer</p>
+                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-player">
+                            <img src="{{ asset('img/eva.jpg') }}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                            <h4 class="title">Eva Jenner</h4>
+                            <p class="category text-primary">Fashion</p>
+                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-google-plus"></i></a>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#pablo" class="btn btn-primary btn-icon btn-icon-mini"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-contact-us text-center">
+        <div class="container">
+            <h2 class="title">Want to work with us?</h2>
+            <p class="description">Your project is very important to us.</p>
+            <div class="row">
+                <div class="col-lg-6 text-center offset-lg-3 col-md-8 offset-md-2">
+                    <div class="input-group form-group-no-border input-lg">
+                        <span class="input-group-addon">
+                            <i class="now-ui-icons users_circle-08"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="First Name...">
+                    </div>
+                    <div class="input-group form-group-no-border input-lg">
+                        <span class="input-group-addon">
+                            <i class="now-ui-icons ui-1_email-85"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Email...">
+                    </div>
+                    <div class="textarea-container">
+                        <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                    </div>
+                    <div class="send-button">
+                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer-default">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.creative-tim.com">
+                            Creative Tim
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://presentation.creative-tim.com">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://blog.creative-tim.com">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+                            MIT License
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, Designed by
+                <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </div>
+        </div>
+    </footer>
+@endsection
