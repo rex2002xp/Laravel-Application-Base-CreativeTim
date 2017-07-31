@@ -4,6 +4,8 @@
 
 Este proyecto es la implementacion del Framework Laravel , junto con una de las mejores plantillas Bootstrap 4 que podemos encontrar en la web. Aunque Bootstrap 4 se encuentra en etapa Alpha, esta version aporta excelentes recursos para construir aplicaciones modernas.
 
+Todos los recursos que he utilizado son gratuitos y los encuentras en sus respectivos sitios web, el proyecto lo unico que busca aportar en la integracion de estos 2 grandes recursos ( Laravel y Now UI Kit ); siente libre de aportar, compartir o utilizarlos para tus proyectos.
+
 
 ## Laravel
 
